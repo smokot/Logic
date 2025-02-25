@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet"  href="styles.css">
+    </head>
+
+    <body>
+        <div class="block">
+            <div class="premises">
+            </div>
+    
+            <div class="conclusion">
+            </div>
+        </div>
+
+        <input type="text" value="4" id="premises" style="font-size: 40px;">
+    </body>
+
+
+    <script src="data.js"></script>
+    <script src="logic.js"></script>
+    <script src="utils.js"></script>
+
+    <script>
+        let logic = new Logic();
+
+        select('#premises').addEventListener('change',function() {
+            select('.premises').innerHTML = '';
+            console.log(this);
+            logic.arraySettings['premisesQuantity'] = this.value;
+            let arResult = logic.generateGame();
+
+            arResult['premises'].forEach(element => {
+                select('.premises').innerHTML += element + "<br>";
+            });
+            select('.conclusion').innerHTML = "<br>" + arResult['conclusion'];
+        });
+
+        
+
+    </script>
+  
+</html>
