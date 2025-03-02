@@ -16,17 +16,15 @@
         <input type="text" value="4" id="premises" style="font-size: 40px;">
     </body>
 
-
     <script src="data.js"></script>
     <script src="logic.js"></script>
     <script src="utils.js"></script>
-
     <script>
-        let logic = new Logic();
 
         select('#premises').addEventListener('change',function() {
             select('.premises').innerHTML = '';
-            console.log(this);
+            let logic = new Logic();
+
             logic.arraySettings['premisesQuantity'] = this.value;
             let arResult = logic.generateGame();
 
@@ -36,8 +34,5 @@
             select('.conclusion').innerHTML = "<br>" + arResult['conclusion'];
         });
 
-        
-
     </script>
-  
 </html>

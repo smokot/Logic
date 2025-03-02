@@ -1,6 +1,6 @@
 let data = {
     "arrayNames": [
-        "Улитка","Marta","Clar","Robby","Bob","Max","Phillip","Alex","Stacy","Lok","Vic","Vinger","Zoy","Lou","Brad","Doil"
+        "Koko","Marta","Clar","Robby","Bob","Max","Phillip","Alex","Stacy","Lok","Vic","Vinger","Zoy","Lou","Brad","Doil","Vena","Sara","Vika","Tara","Bart"
     ],
     "arrayObjects":[
         "Стол","Стул","Кирпич","Стена","Дом"

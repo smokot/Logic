@@ -37,6 +37,13 @@ class Logic{
         return result;
     }
 
+    getName(){
+        let result = '';
+        let arrayNames = data['arrayNames'];
+        result = (random_element(arrayNames).toUpperCase());
+        return result;
+    }
+
     fillArrayForSize(array, size){
         while(array.length < size){
             array.push(this.generateString(3));
@@ -75,10 +82,10 @@ class Logic{
         let stringLink = '';
 
         for (let iteration = 0; iteration <= this.arraySettings['premisesQuantity']; iteration++){
-            stringRandomSubject = this.generateString(3);
+            stringRandomSubject = this.getName();
 
             while (this.arrayObjects[stringRandomSubject] ?? 0){
-                stringRandomSubject = this.generateString(3);
+                stringRandomSubject = this.getName();
             }
 
             if(iteration == 0){
